@@ -27,6 +27,10 @@ app.get("/api/ping", (req, res) => {
   res.json({ message: "ping!" });
 });
 
+app.get("/api/greeting", (req, res) => {
+  res.json({ message: "Welcome to our api!" });
+});
+
 app.listen(PORT, async () => {
   console.log("Listening to port: ", PORT);
 });
