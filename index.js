@@ -9,13 +9,13 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// db.sync()
-//   .then(() => {
-//     console.log("Database connected!");
-//   })
-//   .catch((err) => {
-//     console.log("Failed to sync database", err);
-//   });
+db.sync()
+  .then(() => {
+    console.log("Database connected!");
+  })
+  .catch((err) => {
+    console.log("Failed to sync database", err);
+  });
 
 import bookRouter from "./routes/bookRoute.js";
 app.use("/api/books", bookRouter);
